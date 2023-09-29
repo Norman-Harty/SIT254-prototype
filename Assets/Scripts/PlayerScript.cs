@@ -35,7 +35,8 @@ public class PlayerScript : MonoBehaviour
         goalText = GameObject.FindGameObjectWithTag("GoalText");
         if (goalText != null) goalText.SetActive(false);
 
-        crackContainer = GameObject.FindGameObjectWithTag("CrackController").transform.GetChild(0).gameObject;
+        crackContainer = GameObject.FindGameObjectWithTag("CrackController");
+        if (crackContainer != null) crackContainer = crackContainer.transform.GetChild(0).gameObject;
     }
 
     void Update()
